@@ -1,3 +1,12 @@
+If you import a role twice the 2nd import can prevent the handlers notified
+during the first import to run.
+
+In this example the 2nd import is conditional on "true == false", that never
+happens, therefore mask.yml is never executed.
+
+Yet during the handler-phase the handler is ignored because that conditional
+fails.
+
 To reproduce:
 ```
 python3 -m venv .venv
