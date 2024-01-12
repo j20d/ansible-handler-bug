@@ -1,0 +1,6 @@
+---
+- name: "Notify Handler"
+  debug:
+    msg: "Notifying ..."
+  changed_when: true
+  notify: "run_my_handler"

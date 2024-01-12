@@ -1,0 +1,4 @@
+---
+- name: "run_my_handler"
+  debug:
+    msg: "Handler was called"

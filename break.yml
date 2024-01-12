@@ -1,0 +1,12 @@
+---
+- name: "Reproducer"
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - ansible.builtin.import_role:
+        name: test
+        tasks_from: call.yml
+    - ansible.builtin.import_role:
+        name: test
+        tasks_from: mask.yml
+      when: true == false
